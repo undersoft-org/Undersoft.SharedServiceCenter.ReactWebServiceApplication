@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>b73039db-9e8d-4aa7-aa0c-eabf84c4bb12</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <SpaRoot>..\undersoft.ssc.web.app.client</SpaRoot>
+    <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
+    <SpaProxyServerUrl>https://localhost:5173</SpaProxyServerUrl>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
+      <Version>6.*-*</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Undersoft.SharedServiceCenter\src\Undersoft.SSC.Web.Application\Undersoft.SSC.Web.Application.csproj" />
+    <ProjectReference Include="..\undersoft.ssc.web.application.client\undersoft.ssc.web.application.client.esproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Using Include="Undersoft.SDK.Service.Data.Event" />
+    <Using Include="Undersoft.SDK.Service.Data.Mapper" />
+    <Using Include="Undersoft.SDK.Service.Data.Store" />
+    <Using Include="Undersoft.SDK.Service.Data.Store.Relation" />
+    <Using Include="Undersoft.SDK.Service.Data.Service" />
+    <Using Include="Undersoft.SDK.Service.Data.File" />
+    <Using Include="Undersoft.SDK.Service" />
+    <Using Include="Undersoft.SDK.Extracting" />
+    <Using Include="Undersoft.SDK.Invoking" />
+    <Using Include="Undersoft.SDK.Series" />
+    <Using Include="Undersoft.SDK.Instant" />
+    <Using Include="Undersoft.SDK.Instant.Updating" />
+    <Using Include="Undersoft.SDK.Instant.Proxies" />
+    <Using Include="Undersoft.SDK.Logging" />
+    <Using Include="Undersoft.SDK.Uniques" />
+  </ItemGroup>
+
+
+
+</Project>
